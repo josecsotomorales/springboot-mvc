@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+</head>
+<body>
+<div><a href="/home">Home Page</a></div>
+<div><a href="/chat">Chat Room</a></div>
+
+<form>
+    <label for="username">Username:</label>
+    <input id="username" type="text">
+    <label for="messageText">Message Text:</label>
+    <input id="messageText" type="text">
+    <label for="messageType">Message Type: </label>
+    <select id="messageType">
+        <option selected>Say</option>
+        <option>Shout</option>
+        <option>Whisper</option>
+    </select>
+    <input type="submit">
+</form>
+
+</body>
+</html>

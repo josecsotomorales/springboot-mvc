@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+<div><a href="/home">Home Page</a></div>
+<div><a href="/chat">Chat Room</a></div>
+<br>
+<h1>Welcome to my Application!</h1>
+
+<form action="#" th:action="@{'/home'}" th:object="${messageForm}" method="POST">
+    <label for="greetings">Enter the Word: </label>
+    <input type="text" id="greetings" name="greetings" th:field="*{text}">
+    <input type="submit">
+</form>
+<h1 th:unless="${#lists.size(greetings) > 5}" th:each="msg : ${greetings}" th:text="${msg}">Hello, homepage!</h1>
+<h1 th:if="${#lists.size(greetings) > 5}">I think that's enough!</h1>
+
+</body>
+</html>

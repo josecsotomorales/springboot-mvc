@@ -23,4 +23,5 @@ public class MessageListService {
     public List<String> getMessages() {
         return new ArrayList<>(this.messages);
     }
+
 }

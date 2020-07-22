@@ -2,6 +2,8 @@
 .idea
 /.idea/
 *.iml
+target
+/target/
 
 # No MacOS files
 .DS_Store

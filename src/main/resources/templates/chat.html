@@ -11,7 +11,7 @@
 <div><a href="/home">Home Page</a></div>
 <div><a href="/chat">Chat Room</a></div>
 
-<form>
+<form action="#" th:action="@{'/chat'}" th:object="${chat}" method="POST">
     <label for="username">Username:</label>
     <input id="username" type="text">
     <label for="messageText">Message Text:</label>
@@ -24,6 +24,8 @@
     </select>
     <input type="submit">
 </form>
+
+<h1 th:each="chat : ${chat}" th:text="${chat}">Post your Message!</h1>
 
 </body>
 </html>

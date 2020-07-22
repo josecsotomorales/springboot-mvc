@@ -18,6 +18,7 @@
     <input type="text" id="greetings" name="greetings" th:field="*{text}">
     <input type="submit">
 </form>
+
 <h1 th:unless="${#lists.size(greetings) > 5}" th:each="msg : ${greetings}" th:text="${msg}">Hello, homepage!</h1>
 <h1 th:if="${#lists.size(greetings) > 5}">I think that's enough!</h1>
 

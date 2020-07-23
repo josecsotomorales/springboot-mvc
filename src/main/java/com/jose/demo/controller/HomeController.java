@@ -1,6 +1,6 @@
 package com.jose.demo.controller;
 
-import com.jose.demo.dto.MessageForm;
+import com.jose.demo.model.MessageForm;
 import com.jose.demo.service.MessageListService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.jose.demo.dto;
+package com.jose.demo.model;
 
 public class ChatMessage {
 

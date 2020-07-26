@@ -1,7 +1,6 @@
 package com.jose.demo.model;
 
 public class MessageForm {
-
     private String text;
 
     public String getText() {

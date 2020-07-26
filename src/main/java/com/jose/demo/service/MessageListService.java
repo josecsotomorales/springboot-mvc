@@ -2,7 +2,6 @@ package com.jose.demo.service;
 
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,17 +10,15 @@ public class MessageListService {
 
     private List<String> messages;
 
-    @PostConstruct
-    public void postConstruct() {
+    public MessageListService() {
         this.messages = new ArrayList<>();
     }
 
     public void addMessage(String message) {
-        this.messages.add(message);
+        messages.add(message);
     }
 
     public List<String> getMessages() {
         return new ArrayList<>(this.messages);
     }
-
 }

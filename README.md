@@ -1,2 +1,2 @@
 # spring-demo
- Just a Spring MVC App for Fun
+Just a Spring MVC App for Demo

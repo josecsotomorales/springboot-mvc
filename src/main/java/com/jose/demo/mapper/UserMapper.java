@@ -1,6 +1,5 @@
 package com.jose.demo.mapper;
 
-
 import com.jose.demo.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

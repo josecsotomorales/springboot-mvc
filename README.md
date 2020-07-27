@@ -1,2 +1,11 @@
 # spring-demo
-Just a Spring MVC App for Demo
+Demo Spring MVC App
+
+Technologies:
+- Thymeleaf
+- Spring Boot
+- Spring MVC
+- Spring Security
+- MyBatis
+- H2 Database
+- JUnit

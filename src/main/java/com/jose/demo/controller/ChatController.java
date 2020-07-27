@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/chat")
 public class ChatController {
 
-    private MessageService messageService;
+    private final MessageService messageService;
 
     public ChatController(MessageService messageService) {
         this.messageService = messageService;

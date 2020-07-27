@@ -1,21 +1,24 @@
 package com.jose.demo.service;
 
+import com.jose.demo.mapper.MessageMapper;
 import com.jose.demo.model.ChatForm;
 import com.jose.demo.model.ChatMessage;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class MessageService {
-    private List<ChatMessage> chatMessages;
+    private MessageMapper messageMapper;
+
+    public MessageService(MessageMapper messageMapper) {
+        this.messageMapper = messageMapper;
+    }
 
     @PostConstruct
     public void postConstruct() {
         System.out.println("Creating MessageService bean");
-        this.chatMessages = new ArrayList<>();
     }
 
     public void addMessage(ChatForm chatForm) {
@@ -26,10 +29,10 @@ public class MessageService {
             case "Shout" -> newMessage.setMessage(chatForm.getMessageText().toUpperCase());
             case "Whisper" -> newMessage.setMessage(chatForm.getMessageText().toLowerCase());
         }
-        this.chatMessages.add(newMessage);
+        messageMapper.addMessage(newMessage);
     }
 
     public List<ChatMessage> getChatMessages() {
-        return chatMessages;
+        return messageMapper.getAllMessages();
     }
 }

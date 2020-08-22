@@ -1,5 +1,4 @@
-# spring-demo
-Demo Spring MVC App
+# springbootmvc
 
 Technologies:
 - Thymeleaf
